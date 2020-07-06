@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+      xmlns="http://javafx.com/javafx/8" xmlns:fx="http:/   /javafx.com/fxml/1"
+      fx:controller="sample.controller.TitleController" fx:id="scene">
+    <children>
+        <AnchorPane prefHeight="60" prefWidth="900.0" style="-fx-background-image: url('/img/top/top-bg.jpg');"
+                    onMouseDragged="#dragTitle" onMousePressed="#pressTitle"
+        >
+            <children>
+                <Pane  fx:id="paneExit" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;"
+                      onMouseMoved="#movePaneExit" onMouseExited="#exitMouse" onMouseClicked="#clickBtnExit"
+                      AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="15.0"/>
+                <Pane fx:id="paneZoom" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;"
+                      onMouseMoved="#movePaneZoom" onMouseExited="#exitMouse" onMouseClicked="#clickBtnZoom"
+                      AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="48.0" AnchorPane.topAnchor="15.0"/>
+                <Button fx:id="minWindow" layoutX="827.0" layoutY="12.0" minHeight="15.0" minWidth="15.0"
+                        mnemonicParsing="false"  prefHeight="13.0" prefWidth="13.0"
+                        onMouseMoved="#moveBtnZoom" onMouseClicked="#clickBtnZoom"  onMouseReleased="#releaseBtnZoom"
+                        style="-fx-background-image: url('/img/top/zoom-out-white.png'); -fx-background-color: transparent; -fx-background-repeat: no-repeat; -fx-background-position: center;"
+                        AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="23.0">
+                </Button>
+                <Button fx:id="closeWindow" layoutX="874.0" layoutY="12.0" minHeight="15.0" minWidth="15.0"
+                        mnemonicParsing="false"
+                        onMouseMoved="#moveBtnExit" onMouseClicked="#clickBtnExit"
+                        prefHeight="13.0" prefWidth="13.0"
+                        style="-fx-background-image: url('/img/top/close-white.png'); -fx-background-color: transparent;"
+                        AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="23.0">
+                </Button>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

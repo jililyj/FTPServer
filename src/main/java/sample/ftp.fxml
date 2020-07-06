@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<?import com.jfoenix.controls.JFXTogglePane?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<AnchorPane fx:id="scene" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="567.0"
+            prefWidth="900.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.controller.FtpController">
+    <fx:include source="title.fxml"/>
+    <children>
+        <Button fx:id="serverBtn" contentDisplay="TOP" layoutX="20.0" layoutY="131.0" mnemonicParsing="false"
+                onMouseClicked="#clickServerBtn" onMouseMoved="#changeMouse" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #FFFFFF;"
+                text="FTP服务" textAlignment="JUSTIFY" textFill="#444444">
+            <font>
+                <Font name="Microsoft YaHei" size="14.0"/>
+            </font>
+            <graphic>
+                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="/img/serverOn.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="configBtn" contentDisplay="TOP" layoutX="20.0" layoutY="254.0" mnemonicParsing="false"
+                onMouseClicked="#clickConfigBtn" onMouseExited="#refreshBtn" onMouseMoved="#changeMouse" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #FFFFFF; "
+                text="配置管理" textAlignment="JUSTIFY" textFill="#999999">
+            <font>
+                <Font name="Microsoft YaHei" size="14.0"/>
+            </font>
+            <graphic>
+                <ImageView fitHeight="40" fitWidth="40" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="/img/configOff.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="fixBtn" contentDisplay="TOP" layoutX="20.0" layoutY="378.0" mnemonicParsing="false"
+                onMouseClicked="#clickFixBtn" onMouseMoved="#changeMouse" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #FFFFFF;"
+                text="保修服务" textAlignment="JUSTIFY" textFill="#999999">
+            <font>
+                <Font name="Microsoft YaHei" size="14.0"/>
+            </font>
+            <graphic>
+                <ImageView fitHeight="40" fitWidth="40" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="/img/warrantyOff.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Separator layoutX="100.0" layoutY="84.0" orientation="VERTICAL" prefHeight="400.0"/>
+        <Label layoutX="416.0" layoutY="541.0" text="四川东久科技股份有限公司提供" textFill="#bbbbbb" AnchorPane.bottomAnchor="9.0">
+            <font>
+                <Font name="Microsoft YaHei" size="12.0"/>
+            </font>
+        </Label>
+        <Label layoutX="200.0" layoutY="157.0" text="FTP服务状态：">
+            <font>
+                <Font name="Microsoft YaHei" size="14.0"/>
+            </font>
+        </Label>
+        <JFXToggleButton fx:id="swicth" layoutX="304" layoutY="138" toggleColor="#FFFFFF" unToggleColor="#FFFFFF" toggleLineColor="#337DFB" unToggleLineColor="#DDDDDD" selected="false" onMouseClicked="#changeSwicth"></JFXToggleButton>
+        <ImageView fitHeight="140.0" fitWidth="160.0" layoutX="200.0" layoutY="269.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="/img/printer.png"/>
+            </image>
+        </ImageView>
+        <ImageView fitHeight="144.0" fitWidth="160.0" layoutX="640.0" layoutY="267.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="/img/computer.png"/>
+            </image>
+        </ImageView>
+        <Line fx:id="FTPline" endX="220.0" layoutX="390.0" layoutY="338.0" stroke="#fb3333" strokeDashArray="10,10,10,10"/>
+        <Label fx:id="FTPlabel" layoutX="453.0" layoutY="310.0" text="FTP服务已关闭" textFill="#fb3333">
+            <font>
+                <Font name="Microsoft YaHei Bold" size="14.0"/>
+            </font>
+        </Label>
+
+    </children>
+</AnchorPane>

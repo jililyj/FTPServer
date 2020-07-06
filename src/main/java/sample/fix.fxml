@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<AnchorPane fx:id="scene" prefHeight="567.0" prefWidth="900.0" style="-fx-background-color: #FFFFFF;"
+            stylesheets="/css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sample.controller.FtpController">
+    <fx:include source="title.fxml"/>
+    <children>
+        <Button fx:id="serverBtn" contentDisplay="TOP" layoutX="20.0" layoutY="131.0" mnemonicParsing="false"
+                onMouseClicked="#clickServerBtn" onMouseMoved="#changeMouse" prefHeight="80.0" prefWidth="80.0"
+                style="-fx-background-color: #FFFFFF;" text="FTP服务" textAlignment="JUSTIFY" textFill="#999999">
+            <font>
+                <Font name="Microsoft YaHei" size="14.0"/>
+            </font>
+            <graphic>
+                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="/img/serverOff.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="configBtn" contentDisplay="TOP" layoutX="20.0" layoutY="254.0" mnemonicParsing="false"
+                onMouseMoved="#changeMouse" onMouseClicked="#clickConfigBtn" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #FFFFFF; "
+                text="配置管理" textAlignment="JUSTIFY" textFill="#999999">
+            <font>
+                <Font name="Microsoft YaHei" size="14.0"/>
+            </font>
+            <graphic>
+                <ImageView fitHeight="40" fitWidth="40" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="/img/configOff.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button fx:id="fixBtn" contentDisplay="TOP" layoutX="20.0" layoutY="378.0" mnemonicParsing="false"
+                onMouseMoved="#changeMouse" onMouseClicked="#clickFixBtn" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #FFFFFF;"
+                text="保修服务" textAlignment="JUSTIFY" textFill="#444444">
+            <font>
+                <Font name="Microsoft YaHei" size="14.0"/>
+            </font>
+            <graphic>
+                <ImageView fitHeight="40" fitWidth="40" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="/img/warrantyOn.png"/>
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Separator layoutX="100.0" layoutY="84.0" orientation="VERTICAL" prefHeight="400.0"/>
+        <Label layoutX="416.0" layoutY="541.0" text="四川东久科技股份有限公司提供" textFill="#bbbbbb" AnchorPane.bottomAnchor="9.0">
+            <font>
+                <Font name="Microsoft YaHei" size="12.0"/>
+            </font>
+        </Label>
+        <Pane layoutX="200.0" layoutY="131.0" prefHeight="340.0" prefWidth="225.0" styleClass="fixPane">
+            <children>
+                <ImageView fitHeight="340.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="/img/QRcodeNew.png"/>
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <Label layoutX="475.0" layoutY="131.0" text="报修操作流程">
+            <font>
+                <Font name="Microsoft YaHei Bold" size="14.0"/>
+            </font>
+        </Label>
+        <Separator prefWidth="324.0" AnchorPane.leftAnchor="476.0" AnchorPane.topAnchor="160.0"/>
+        <Pane layoutX="476.0" layoutY="181.0" prefHeight="57.0" prefWidth="324.0" styleClass="fixPane">
+            <children>
+                <Label layoutX="19.0" layoutY="12.0" text="第一步：">
+                    <font>
+                        <Font size="12.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="19.0" layoutY="30.0" text="扫描二维码，关注东久科技微信公众号" textFill="#999999">
+                    <font>
+                        <Font name="Microsoft YaHei Bold" size="12.0"/>
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Pane layoutX="476.0" layoutY="259.0" prefHeight="57.0" prefWidth="324.0" styleClass="fixPane">
+            <children>
+                <Label layoutX="19.0" layoutY="12.0" text="第二步：">
+                    <font>
+                        <Font size="12.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="19.0" layoutY="30.0" text="选择”东久微服;" textFill="#999999">
+                    <font>
+                        <Font name="Microsoft YaHei Bold" size="12.0"/>
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Pane layoutX="476.0" layoutY="336.0" prefHeight="57.0" prefWidth="324.0" styleClass="fixPane">
+            <children>
+                <Label layoutX="19.0" layoutY="12.0" text="第三步：">
+                    <font>
+                        <Font size="12.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="19.0" layoutY="30.0" text="选择”我的产品;功能的”其他维护“" textFill="#999999">
+                    <font>
+                        <Font name="Microsoft YaHei Bold" size="12.0"/>
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Pane layoutX="476.0" layoutY="414.0" prefHeight="57.0" prefWidth="324.0" styleClass="fixPane">
+            <children>
+                <Label layoutX="19.0" layoutY="12.0" text="第四步：">
+                    <font>
+                        <Font size="12.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="19.0" layoutY="30.0" text="填写报修维护申请单，点击提交。" textFill="#999999">
+                    <font>
+                        <Font name="Microsoft YaHei Bold" size="12.0"/>
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+    </children>
+
+</AnchorPane>
